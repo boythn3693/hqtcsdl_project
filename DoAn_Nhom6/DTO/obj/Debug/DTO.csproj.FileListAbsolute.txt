@@ -1,0 +1,5 @@
+E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\DTO\bin\Debug\DTO.dll
+E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\DTO\bin\Debug\DTO.pdb
+E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\DTO\obj\Debug\DTO.dll
+E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\DTO\obj\Debug\DTO.pdb
