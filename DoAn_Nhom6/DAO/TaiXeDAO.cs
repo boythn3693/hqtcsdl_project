@@ -8,6 +8,21 @@ namespace DAO
 {
     public class TaiXeDAO
     {
+        public void XoaTaiXe(string mataixe)
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("sp_XOA_TAIXE", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaTaiXe", SqlDbType.Int);
+            //gán giá trị cho tham số
+            cmd.Parameters["@MaTaiXe"].Value = mataixe;
+            //Thực thi câu truy vấn
+            cmd.ExecuteNonQuery();
+            //Đóng kết nối
+            cn.Close();
+        }
+
         public void SuaTaiXe(TaiXeDTO dto)
         {
             SqlConnection cn;
