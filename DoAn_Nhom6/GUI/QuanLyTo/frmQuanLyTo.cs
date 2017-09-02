@@ -27,5 +27,10 @@ namespace GUI.QuanLyTo
             dsLoi.DataSource = table;
             dsSuaLoi.DataSource = table;
         }
+
+        private void btnXemDanhSach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

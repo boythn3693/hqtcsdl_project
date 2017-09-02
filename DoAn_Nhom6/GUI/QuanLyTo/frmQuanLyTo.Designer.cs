@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.dsLoi = new System.Windows.Forms.DataGridView();
+            this.TenTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhanChuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuanLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXemDanhSach = new System.Windows.Forms.Button();
             this.btnThemTo = new System.Windows.Forms.Button();
             this.btnSuaTo = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenTo = new System.Windows.Forms.TextBox();
             this.dateNgayNhanChuc = new System.Windows.Forms.DateTimePicker();
@@ -43,16 +47,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbTenToTruong = new System.Windows.Forms.ComboBox();
             this.dsSuaLoi = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TenTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayNhanChuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuanLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSuaLoi)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,30 @@
             this.dsLoi.Size = new System.Drawing.Size(470, 219);
             this.dsLoi.TabIndex = 0;
             // 
+            // TenTo
+            // 
+            this.TenTo.DataPropertyName = "TenTo";
+            this.TenTo.HeaderText = "Tên Tổ";
+            this.TenTo.Name = "TenTo";
+            // 
+            // ToTruong
+            // 
+            this.ToTruong.DataPropertyName = "ToTruong";
+            this.ToTruong.HeaderText = "Tổ Trưởng";
+            this.ToTruong.Name = "ToTruong";
+            // 
+            // NgayNhanChuc
+            // 
+            this.NgayNhanChuc.DataPropertyName = "NgayNhanChuc";
+            this.NgayNhanChuc.HeaderText = "Ngày nhận chức";
+            this.NgayNhanChuc.Name = "NgayNhanChuc";
+            // 
+            // QuanLy
+            // 
+            this.QuanLy.DataPropertyName = "QuanLy";
+            this.QuanLy.HeaderText = "Người quản lý";
+            this.QuanLy.Name = "QuanLy";
+            // 
             // btnXemDanhSach
             // 
             this.btnXemDanhSach.Location = new System.Drawing.Point(190, 154);
@@ -79,6 +103,7 @@
             this.btnXemDanhSach.TabIndex = 1;
             this.btnXemDanhSach.Text = "Xem danh sách tổ";
             this.btnXemDanhSach.UseVisualStyleBackColor = true;
+            this.btnXemDanhSach.Click += new System.EventHandler(this.btnXemDanhSach_Click);
             // 
             // btnThemTo
             // 
@@ -98,14 +123,14 @@
             this.btnSuaTo.Text = "Cập nhật";
             this.btnSuaTo.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnXoa
             // 
-            this.button4.Location = new System.Drawing.Point(680, 154);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(680, 154);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(122, 23);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xoá Tổ";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -199,52 +224,6 @@
             this.dsSuaLoi.Size = new System.Drawing.Size(462, 219);
             this.dsSuaLoi.TabIndex = 15;
             // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(133, 436);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 31);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Bảng tranh chấp lỗi";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(677, 436);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(192, 31);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Bảng sửa lỗi tranh chấp";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TenTo
-            // 
-            this.TenTo.DataPropertyName = "TenTo";
-            this.TenTo.HeaderText = "Tên Tổ";
-            this.TenTo.Name = "TenTo";
-            // 
-            // ToTruong
-            // 
-            this.ToTruong.DataPropertyName = "ToTruong";
-            this.ToTruong.HeaderText = "Tổ Trưởng";
-            this.ToTruong.Name = "ToTruong";
-            // 
-            // NgayNhanChuc
-            // 
-            this.NgayNhanChuc.DataPropertyName = "NgayNhanChuc";
-            this.NgayNhanChuc.HeaderText = "Ngày nhận chức";
-            this.NgayNhanChuc.Name = "NgayNhanChuc";
-            // 
-            // QuanLy
-            // 
-            this.QuanLy.DataPropertyName = "QuanLy";
-            this.QuanLy.HeaderText = "Người quản lý";
-            this.QuanLy.Name = "QuanLy";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "TenTo";
@@ -269,6 +248,28 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Người quản lý";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(133, 436);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(192, 31);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Bảng tranh chấp lỗi";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(677, 436);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(192, 31);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Bảng sửa lỗi tranh chấp";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmQuanLyTo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,7 +287,7 @@
             this.Controls.Add(this.dateNgayNhanChuc);
             this.Controls.Add(this.txtTenTo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSuaTo);
             this.Controls.Add(this.btnThemTo);
             this.Controls.Add(this.btnXemDanhSach);
@@ -309,7 +310,7 @@
         private System.Windows.Forms.Button btnXemDanhSach;
         private System.Windows.Forms.Button btnThemTo;
         private System.Windows.Forms.Button btnSuaTo;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenTo;
         private System.Windows.Forms.DateTimePicker dateNgayNhanChuc;
