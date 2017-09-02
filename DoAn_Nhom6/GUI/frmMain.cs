@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using GUI.QuanLyTo;
 namespace GUI
 {
     public partial class frmMain : Form
@@ -35,6 +35,12 @@ namespace GUI
             {
                 
             }
+        }
+
+        private void btnQuanLyTo_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTo ql = new frmQuanLyTo();
+            ql.ShowDialog();
         }
     }
 }

@@ -31,13 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinTàiXếToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phânCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchTrìnhToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.phânCôngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTàiXếToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchTrìnhChạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnQuanLyTo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,10 +59,17 @@
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinTàiXếToolStripMenuItem});
+            this.thôngTinTàiXếToolStripMenuItem,
+            this.btnQuanLyTo});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
+            // 
+            // thôngTinTàiXếToolStripMenuItem
+            // 
+            this.thôngTinTàiXếToolStripMenuItem.Name = "thôngTinTàiXếToolStripMenuItem";
+            this.thôngTinTàiXếToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.thôngTinTàiXếToolStripMenuItem.Text = "Quản lý tài xế";
             // 
             // lịchTrìnhToolStripMenuItem
             // 
@@ -91,12 +99,6 @@
             this.phânCôngToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.phânCôngToolStripMenuItem1.Text = "Phân công";
             // 
-            // thôngTinTàiXếToolStripMenuItem
-            // 
-            this.thôngTinTàiXếToolStripMenuItem.Name = "thôngTinTàiXếToolStripMenuItem";
-            this.thôngTinTàiXếToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.thôngTinTàiXếToolStripMenuItem.Text = "Thông tin tài xế";
-            // 
             // lịchTrìnhChạyToolStripMenuItem
             // 
             this.lịchTrìnhChạyToolStripMenuItem.Name = "lịchTrìnhChạyToolStripMenuItem";
@@ -109,6 +111,13 @@
             this.xemThôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.xemThôngTinCáNhânToolStripMenuItem.Text = "Xem thông tin cá nhân";
             // 
+            // btnQuanLyTo
+            // 
+            this.btnQuanLyTo.Name = "btnQuanLyTo";
+            this.btnQuanLyTo.Size = new System.Drawing.Size(152, 22);
+            this.btnQuanLyTo.Text = "Quản lý tổ";
+            this.btnQuanLyTo.Click += new System.EventHandler(this.btnQuanLyTo_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +127,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý lịch trình Xe khách";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -138,5 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiXếToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lịchTrìnhChạyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemThôngTinCáNhânToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnQuanLyTo;
     }
 }

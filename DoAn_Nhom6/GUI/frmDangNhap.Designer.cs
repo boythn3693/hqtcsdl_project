@@ -73,7 +73,7 @@
             // btnThoat
             // 
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Location = new System.Drawing.Point(102, 84);
+            this.btnThoat.Location = new System.Drawing.Point(102, 108);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(232, 84);
+            this.btnDangNhap.Location = new System.Drawing.Point(232, 108);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
             this.btnDangNhap.TabIndex = 5;
@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(354, 140);
+            this.ClientSize = new System.Drawing.Size(396, 164);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtMatKhau);
@@ -108,6 +108,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập Hệ thống";
             this.ResumeLayout(false);
             this.PerformLayout();
