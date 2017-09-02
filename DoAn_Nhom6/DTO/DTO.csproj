@@ -43,6 +43,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiXeDTO.cs" />
     <Compile Include="ToLaiDTO.cs" />
+    <Compile Include="TuyenDuongDTO.cs" />
+    <Compile Include="VaiTroDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
