@@ -12,7 +12,9 @@ namespace GUI
 {
     public partial class frmMain : Form
     {
-        public static string taikhoan;
+        private static string taikhoan;
+        private static int phanquyen;
+
         public frmMain()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace GUI
             }
             else
             {
-
+                
             }
         }
     }

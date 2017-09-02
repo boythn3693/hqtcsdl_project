@@ -7,3 +7,12 @@ E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\BUS\bin\Debug\DTO.pdb
 E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\BUS\obj\Debug\BUS.dll
 E:\HocTap\HCDH\HK2\CSDL\DoAn\DoAn_Nhom6\BUS\obj\Debug\BUS.pdb
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\BUS.dll
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\BUS.pdb
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\DAO.dll
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\DTO.dll
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\DAO.pdb
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\bin\Debug\DTO.pdb
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\obj\Debug\BUS.dll
+E:\HocTap\HCDH\HK2\CSDL\DA\DoAn_Nhom6\BUS\obj\Debug\BUS.pdb
