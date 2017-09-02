@@ -1,0 +1,1 @@
+﻿DECLARE @RT NVARCHAR(512)EXEC PROC_DOCTAIXE 'tklinh', @RT OUTPRINT N'TÊN TÀI XẾ VỚI TÊN ĐĂNG NHẬP tklinh LÀ: ' +  @RT

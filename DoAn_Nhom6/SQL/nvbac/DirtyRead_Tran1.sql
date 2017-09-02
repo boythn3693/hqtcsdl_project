@@ -1,0 +1,1 @@
+﻿DECLARE @RT INTEXEC @RT = PROC_THEMTAIXE N'Tống Khánh Linh', 100 , 70, 'tklinh', 'tongkhanhlinh', 1, 1IF @RT = 1	PRINT N'THÊM TÀI XẾ THẤT BẠI'ELSE	PRINT N'THÊM TÀI XẾ THÀNH CÔNG'

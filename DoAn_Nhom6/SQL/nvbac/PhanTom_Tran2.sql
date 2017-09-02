@@ -1,0 +1,1 @@
+﻿DECLARE @RT INTEXEC @RT = PROC_THEMTAIXELATOTRUONG N'Nguyễn Thành Tài', 1000, 100, 'nttai', 'nttai', 1, 6IF @RT = 1	PRINT N'THÊM TÀI XẾ LÀ TỔ TRƯỞNG THẤT BẠI'ELSE	PRINT N'THÊM TÀI XẾ LÀ TỔ TRƯỞNG THÀNH CÔNG'
