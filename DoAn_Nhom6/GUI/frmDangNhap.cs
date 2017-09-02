@@ -21,11 +21,6 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,12 +33,12 @@ namespace GUI
 
             if (__taikhoan.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập tên tài khoản", "Thông báo");
+                MessageBox.Show("Vui lòng nhập tên tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtTaiKhoan.Focus();
             }
             else if (__matkhau.Length == 0)
             {
-                MessageBox.Show("Vui lòng nhập tên mật khẩu", "Thông báo");
+                MessageBox.Show("Vui lòng nhập tên mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtMatKhau.Focus();
             }
             else
