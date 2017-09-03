@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using GUI.QuanLyTo;
 namespace GUI
 {
     public partial class frmMain : Form
     {
-        public static string taikhoan;
+        private static string taikhoan;
+        private static int phanquyen;
+
         public frmMain()
         {
             InitializeComponent();
@@ -31,8 +33,14 @@ namespace GUI
             }
             else
             {
-
+                
             }
+        }
+
+        private void btnQuanLyTo_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTo ql = new frmQuanLyTo();
+            ql.ShowDialog();
         }
     }
 }
