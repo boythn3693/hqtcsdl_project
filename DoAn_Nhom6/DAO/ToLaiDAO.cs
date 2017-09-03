@@ -207,7 +207,7 @@ namespace DAO
 
             //gán giá trị cho tham số
             cmd.Parameters["@MaTo"].Value = t.Mato;
-            cmd.Parameters["@NgayNhanChuc"].Value = t.Quanly;
+            cmd.Parameters["@NgayNhanChuc"].Value = t.Ngaynhanchuc;
 
             //Thực thi câu truy vấn
             cmd.ExecuteNonQuery();
@@ -226,7 +226,7 @@ namespace DAO
 
             //gán giá trị cho tham số
             cmd.Parameters["@MaTo"].Value = t.Mato;
-            cmd.Parameters["@NgayNhanChuc"].Value = t.Quanly;
+            cmd.Parameters["@NgayNhanChuc"].Value = t.Ngaynhanchuc;
 
             //Thực thi câu truy vấn
             cmd.ExecuteNonQuery();
@@ -245,7 +245,7 @@ namespace DAO
 
             //gán giá trị cho tham số
             cmd.Parameters["@MaTo"].Value = t.Mato;
-            cmd.Parameters["@NgayNhanChuc"].Value = t.Quanly;
+            cmd.Parameters["@NgayNhanChuc"].Value = t.Ngaynhanchuc;
 
             //Thực thi câu truy vấn
             cmd.ExecuteNonQuery();

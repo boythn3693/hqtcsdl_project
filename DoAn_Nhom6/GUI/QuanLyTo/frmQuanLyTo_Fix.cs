@@ -44,7 +44,7 @@ namespace GUI.QuanLyTo
         {
             if (dsTo_2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                int maTo = Convert.ToInt32(dsTo_2.Rows[e.RowIndex].Cells["MaTo"].Value);
+                int maTo = Convert.ToInt32(dsTo_2.Rows[e.RowIndex].Cells[0].Value);
 
                 ToLaiDTO dto = ToLaiBUS.TimKiemTheoTo(maTo);
                 dateNgayNhanChuc.Value = dto.Ngaynhanchuc;
@@ -61,7 +61,7 @@ namespace GUI.QuanLyTo
                 dto.Ngaynhanchuc = Convert.ToDateTime(dateNgayNhanChuc.Value);
 
                 ToLaiBUS.CapNhatNgayNhanChuc(dto);
-             //   LoadDanhSach_1();
+                loaddata();
             }
             catch (Exception ex)
             {
@@ -78,12 +78,22 @@ namespace GUI.QuanLyTo
                 dto.Ngaynhanchuc = Convert.ToDateTime(dateNgayNhanChuc.Value);
 
                 ToLaiBUS.CapNhatNgayNhanChuc_Fix(dto);
-                //   LoadDanhSach_1();
+                loaddata();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnTo_Click(object sender, EventArgs e)
+        {
+            loaddata();
+        }
+        public void loaddata()
+        {
+            int maTo = Convert.ToInt32(cbToLai.SelectedValue);
+            dsTo_2.DataSource = ToLaiBUS.XemTheoTo(maTo);
         }
 
     }
