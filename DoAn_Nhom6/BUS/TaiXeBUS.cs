@@ -1,4 +1,5 @@
 ﻿using DAO;
+using System.Data;
 
 namespace BUS
 {
@@ -8,6 +9,15 @@ namespace BUS
         {
             TaiXeDAO dao = new TaiXeDAO();
             return dao.DangNhap(tendn, matkhau);
+        }
+        public static DataTable LoadDanhSachToTruong()
+        {
+            return TaiXeDAO.DanhSachTaiXe();
+        }
+
+        public static DataTable LoadDanhSachQL()
+        {
+            return TaiXeDAO.DanhSachQuanLy();
         }
     }
 }

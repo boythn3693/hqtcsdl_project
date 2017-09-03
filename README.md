@@ -1,1 +1,0 @@
-# hqtcsdl_project

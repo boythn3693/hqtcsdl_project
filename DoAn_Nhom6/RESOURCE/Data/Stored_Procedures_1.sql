@@ -53,10 +53,15 @@ AS
 GO
 --Tổ lái--
 ----Select All ToLai
+--DROP PROCEDURE sp_SelectAllToLai
 CREATE PROCEDURE sp_SelectAllToLai
 AS
-	SELECT * FROM ToLai
-GO
+	SELECT T.MaTo,T.TenTo,TX1.TenTaiXe,T.NgayNhanChuc,TX2.TenTaiXe
+	FROM TOLAI T, TAIXE TX1, TAIXE TX2 
+	WHERE T.ToTruong=TX1.MaTaiXe AND T.QuanLy=TX2.MaTaiXe
+GO 
+EXEC sp_SelectAllToLai 
+select * from TOLAI
 
 ----Select ToLai By MaTo
 CREATE PROCEDURE sp_SelectToLai_MaTo
@@ -64,6 +69,16 @@ CREATE PROCEDURE sp_SelectToLai_MaTo
 AS
 	SELECT * FROM ToLai WHERE MaTo=@MaTo
 GO
+
+CREATE PROCEDURE sp_Timkiem_MaTo
+(@MaTo int)
+AS
+	SELECT t.MaTo,t.TenTo,t1.TenTaiXe,t.NgayNhanChuc,t2.TenTaiXe
+	FROM ToLai t, TAIXE t1, TAIXE t2 
+	WHERE t.MaTo=@MaTo and t.QuanLy=t2.MaTaiXe and t.ToTruong=t1.MaTaiXe
+GO
+Exec sp_Timkiem_MaTo 1
+
 --Them Tolai
 CREATE PROCEDURE sp_ThemToLai(
 		@MaTo int out,

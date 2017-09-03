@@ -1,1 +1,0 @@
-﻿DECLARE @TinhTrangLan1 BIT,@TinhTrangLan2 BIT EXEC PROC_DOCTINHTRANGTAIXE 'tklinh',@TinhTrangLan1 OUT, @TinhTrangLan2 OUTPRINT N'TÌNH TRẠNG TÀI XẾ LẦN ĐỌC ĐẦU TIÊN: ' + @TinhTrangLan1PRINT N'TÌNH TRẠNG TÀI XẾ LẦN ĐỌC THỨ HAI: ' + @TinhTrangLan2

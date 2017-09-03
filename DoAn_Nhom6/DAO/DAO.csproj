@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProviders.cs" />
+    <Compile Include="LichTrinhDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiXeDAO.cs" />
+    <Compile Include="TaiXe_LichTrinhDAO.cs" />
+    <Compile Include="ToLaiDAO.cs" />
     <Compile Include="TuyenDuongDAO.cs" />
     <Compile Include="VaiTroDAO.cs" />
   </ItemGroup>

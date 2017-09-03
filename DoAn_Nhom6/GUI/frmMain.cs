@@ -42,5 +42,11 @@ namespace GUI
             frmQuanLyTo ql = new frmQuanLyTo();
             ql.ShowDialog();
         }
+
+        private void quanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frm = new frmDoiMatKhau();
+            frm.ShowDialog();
+        }
     }
 }

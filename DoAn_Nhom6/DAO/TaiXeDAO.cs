@@ -114,11 +114,26 @@ namespace DAO
             return list;
         }
 
-        public DataTable DanhSachTaiXe()
+        public static DataTable DanhSachTaiXe()
         {
             SqlConnection cn;
             cn = DataProviders.ConnectionDB();
             SqlCommand cmd = new SqlCommand("sp_DANHSACH_TAIXE", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            da.Dispose();
+            dt.Dispose();
+            return dt;
+        }
+
+        public static DataTable DanhSachQuanLy()
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("sp_DANHSACH_QUANLY", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -145,6 +160,104 @@ namespace DAO
             //Đóng kết nối
             cn.Close();
             return (int)System.Data.ParameterDirection.ReturnValue;
+        }
+
+        public static DataTable DanhSachTaiKhoan()
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("sp_DSTaiKhoan", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            da.Dispose();
+            dt.Dispose();
+            return dt;
+        }
+        public static DataTable KiemTraTaiKhoann(string tentk, string mk)
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("GT_DANGNHAP", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@TENDANGNHAP", SqlDbType.VarChar);
+            cmd.Parameters.Add("@MATKHAU", SqlDbType.VarChar);
+            //gán giá trị cho tham số
+            cmd.Parameters["@TENDANGNHAP"].Value = tentk;
+            cmd.Parameters["@MATKHAU"].Value = mk;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            da.Dispose();
+            dt.Dispose();
+            return dt;   
+        }
+        public static DataTable KiemTraTaiKhoan_Fix(string tentk, string mk)
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("GT_FIX_DANGNHAP", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@TENDANGNHAP", SqlDbType.VarChar);
+            cmd.Parameters.Add("@MATKHAU", SqlDbType.VarChar);
+            //gán giá trị cho tham số
+            cmd.Parameters["@TENDANGNHAP"].Value = tentk;
+            cmd.Parameters["@MATKHAU"].Value = mk;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            da.Dispose();
+            dt.Dispose();
+            return dt;
+        }
+
+        public static void CapNhatTaiKhoan(string tentk, string mk)
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("GT_DOIMATKHAU", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@TenDangNhap", SqlDbType.VarChar);
+            cmd.Parameters.Add("@MatKhau", SqlDbType.VarChar);
+
+            //gán giá trị cho tham số
+            cmd.Parameters["@TenDangNhap"].Value = tentk;
+            cmd.Parameters["@MatKhau"].Value = mk;
+
+            //Thực thi câu truy vấn
+            cmd.ExecuteNonQuery();
+            //Đóng kết nối
+            cn.Close();
+        }
+
+        public static TaiXeDTO LayThongTinTheoTenTK(string ten)
+        {
+            SqlConnection cn;
+            cn = DataProviders.ConnectionDB();
+            SqlCommand cmd = new SqlCommand("sp_LayThongTinTheoTen", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@TENDANGNHAP", SqlDbType.VarChar);
+            //gán giá trị cho tham số
+            cmd.Parameters["@TENDANGNHAP"].Value = ten;
+
+            //Thực thi câu truy vấn
+            SqlDataReader reader = cmd.ExecuteReader();
+            TaiXeDTO dto = new TaiXeDTO();
+            while (reader.Read())
+            {
+                dto.Tendangnhap = reader.GetString(0);
+                dto.Matkhau = reader.GetString(1);
+            }
+            //Đóng kết nối
+            cn.Close();
+            return dto;
         }
     }
 }

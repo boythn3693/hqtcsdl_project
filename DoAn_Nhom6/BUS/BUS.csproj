@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyTaiKhoan.cs" />
     <Compile Include="TaiXeBUS.cs" />
+    <Compile Include="ToLaiBUS.cs" />
     <Compile Include="TuyenDuongBUS.cs" />
   </ItemGroup>
   <ItemGroup>

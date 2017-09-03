@@ -50,6 +50,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,8 +64,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyTo\frmQuanLyTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTo\frmQuanLyTo.Designer.cs">
+      <DependentUpon>frmQuanLyTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTo\frmQuanLyTo_Fix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTo\frmQuanLyTo_Fix.Designer.cs">
+      <DependentUpon>frmQuanLyTo_Fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTo\frmXemDanhSach_Fix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTo\frmXemDanhSach_Fix.Designer.cs">
+      <DependentUpon>frmXemDanhSach_Fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTo\frmXemTheoNguoiQuanLy_Fix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTo\frmXemTheoNguoiQuanLy_Fix.Designer.cs">
+      <DependentUpon>frmXemTheoNguoiQuanLy_Fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTuyenDuong\frmQuanLyTuyenDuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTuyenDuong\frmQuanLyTuyenDuong.Designer.cs">
+      <DependentUpon>frmQuanLyTuyenDuong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -73,6 +112,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyTo\frmQuanLyTo.resx">
+      <DependentUpon>frmQuanLyTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTo\frmQuanLyTo_Fix.resx">
+      <DependentUpon>frmQuanLyTo_Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTo\frmXemDanhSach_Fix.resx">
+      <DependentUpon>frmXemDanhSach_Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTo\frmXemTheoNguoiQuanLy_Fix.resx">
+      <DependentUpon>frmXemTheoNguoiQuanLy_Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTuyenDuong\frmQuanLyTuyenDuong.resx">
+      <DependentUpon>frmQuanLyTuyenDuong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +136,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyTuyenDuong\ge5iumb4.wic" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
